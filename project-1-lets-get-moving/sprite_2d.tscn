@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dat0qdxrwbc6h"]
+
+[ext_resource type="Texture2D" uid="uid://dn8iycmxeqd6i" path="res://homer sprite.png" id="1_mehiu"]
+[ext_resource type="Script" uid="uid://bdit62epgg52u" path="res://icon.gd" id="2_lt4yx"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_j0jvi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_j0jvi"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=519562627]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1117391334]
+z_index = 1
+position = Vector2(354.5, 231.5)
+scale = Vector2(0.51797384, 0.5122549)
+texture = ExtResource("1_mehiu")
+script = ExtResource("2_lt4yx")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=871582845]
+position = Vector2(740.625, 441.2812)
+scale = Vector2(355.15222, 312.56238)
+mesh = SubResource("SphereMesh_j0jvi")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=953557706]
+position = Vector2(136.00002, 111.00001)
+scale = Vector2(233.99986, 171.99998)
+mesh = SubResource("BoxMesh_j0jvi")

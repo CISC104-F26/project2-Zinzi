@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bckgobnviv10l"]
+
+[ext_resource type="Script" uid="uid://banmkhbpf2wet" path="res://player_3d.gd" id="1_wiwsh"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_kfuul"]
+albedo_color = Color(0.08235294, 1, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_s6331"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_jar5b"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_vdma3"]
+
+[sub_resource type="Environment" id="Environment_j0jvi"]
+background_mode = 1
+
+[node name="Main3d" type="Node3D" unique_id=1796099999]
+
+[node name="player3d" type="MeshInstance3D" parent="." unique_id=1987140720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6812272, 0.028600693, 0)
+material_override = SubResource("ORMMaterial3D_kfuul")
+mesh = SubResource("CapsuleMesh_s6331")
+script = ExtResource("1_wiwsh")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1067842126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12561703, -0.012154937, 1.3823142)
+material_override = SubResource("ORMMaterial3D_kfuul")
+mesh = SubResource("BoxMesh_jar5b")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=2130391274]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1216284, 1.385525, 0.10800266)
+material_override = SubResource("ORMMaterial3D_kfuul")
+mesh = SubResource("SphereMesh_vdma3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=537350697]
+transform = Transform3D(0.6554942, 0, 0.75520027, 0, 1, 0, -0.75520027, 0, 0.6554942, -5.460393, -0.34804308, 1.009361)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=318000263]
+environment = SubResource("Environment_j0jvi")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1986283514]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5680983, 1.4607816, 4.7668037)
+current = true
